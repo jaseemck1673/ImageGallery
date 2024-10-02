@@ -17,6 +17,11 @@ class ImageGallery extends StatelessWidget {
     double screenwidth = MediaQuery.of(context).size.width;
     int crossAxisCount = screenwidth > 600 ? 4 : (screenwidth > 400 ? 3 : 2);
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Image Gallery"),
+        backgroundColor: Colors.green.shade500,
+
+      ),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: crossAxisCount,
